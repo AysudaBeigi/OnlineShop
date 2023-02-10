@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">OnlineShop</string>
+    <string name="receiver_name">receiver</string>
+    <string name="order_id">order id</string>
+    <string name="total_price">total price</string>
+    <string name="order_status">order status</string>
+    <string name="created_at">created at</string>
+    <string name="empty_order">There is no order !!!</string>
+    <string name="product">product</string>
 </resources>

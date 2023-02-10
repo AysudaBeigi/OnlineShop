@@ -2,7 +2,7 @@ package com.example.onlineshop.domain
 
 data class Order(
     val products: List<Product>,
-    val created_at: Long,
+    val created_at: String,
     val status: String,
     val total_price: Int,
     val id: String,

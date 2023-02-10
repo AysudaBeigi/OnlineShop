@@ -9,7 +9,7 @@ data class OrderDto(
     @SerialName("products")
     val products: List<ProductDto>,
     @SerialName("created_at")
-    val created_at: Long,
+    val created_at: String,
     @SerialName("status")
     val status: String,
     @SerialName("total_price")
