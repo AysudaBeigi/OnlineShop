@@ -33,9 +33,3 @@ data class ProductDto(
     @SerialName("id")
     val id: String,
 )
-
-@Serializable
-data class OrderListDto(
-    @SerialName("orders")
-    val orders: List<OrderDto>,
-)
