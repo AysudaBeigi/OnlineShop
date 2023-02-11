@@ -1,4 +1,4 @@
-package com.example.onlineshop.presentation
+package com.example.onlineshop.presentation.ui
 
 import android.widget.Toast
 import androidx.compose.foundation.clickable

@@ -1,4 +1,4 @@
-package com.example.onlineshop.presentation
+package com.example.onlineshop.presentation.ui
 
 
 import androidx.compose.foundation.layout.*
