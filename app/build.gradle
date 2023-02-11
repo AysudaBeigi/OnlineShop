@@ -72,7 +72,9 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     testImplementation "io.mockk:mockk:V1.13.4"
-
+    testImplementation  "io.mockk:mockk:1.10.5"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.3"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
     implementation 'com.google.code.gson:gson:2.10.1'
 
     implementation 'com.airbnb.android:lottie:3.5.0'

@@ -33,7 +33,7 @@ fun getLogger(): Interceptor {
 @OptIn(ExperimentalSerializationApi::class)
 private fun Scope.retrofitBuilder(): Retrofit {
     return Retrofit.Builder()
-        .baseUrl("https://base.url")
+        .baseUrl("https://api.github.com")
         .addConverterFactory(
             Json(builderAction = {
                 ignoreUnknownKeys = true

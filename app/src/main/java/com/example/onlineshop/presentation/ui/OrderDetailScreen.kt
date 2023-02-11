@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,6 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.onlineshop.R
@@ -72,10 +74,10 @@ fun ProductItem(
     imageLoader: @Composable (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Row(modifier = modifier) {
+    Row(modifier = modifier.fillMaxWidth()) {
         imageLoader(product.image_url)
         Spacer(modifier = Modifier.size(16.dp))
-        Column(modifier = Modifier,) {
+        Column(modifier = Modifier) {
             Text(
                 text = product.name,
                 modifier = Modifier,
@@ -141,5 +143,25 @@ private fun OrderDetailItem(titleSrc: Int, content: String) {
             ),
             textAlign = TextAlign.Start,
         )
+    }
+}
+
+@Preview
+@Composable
+fun OrderDetailScreenPreview() {
+    MaterialTheme {
+        OrderDetailScreen(order = Order(
+            listOf(
+                Product(1, "", "Shoe", 20000, ""),
+                Product(2, "", "Bag", 20000, ""),
+                Product(1, "", "Pencil", 20000, "")
+            ),
+            "2022.03.01",
+            "Done",
+            560000,
+            "",
+            "Aysuda"
+        ),
+            {})
     }
 }

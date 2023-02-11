@@ -26,9 +26,9 @@ class OrdersViewModel(
         launch {
             onBg {
                 runCatching {
-                    getOrdersUseCase.execute()
-                }.onSuccess { list ->
-                    _loadableOrders.postValue(Loaded(list))
+                    getOrdersUseCase.execute().collect {
+                        _loadableOrders.postValue(Loaded(it))
+                    }
                 }.onFailure {
                     _loadableOrders.postValue(Failed(it))
                 }
@@ -36,8 +36,8 @@ class OrdersViewModel(
         }
     }
 
-    fun getOrder(id: String):Order?{
-         return _loadableOrders.value?.data?.find {
+    fun getOrder(id: String): Order? {
+        return _loadableOrders.value?.data?.find {
             id == it.id
         }
     }

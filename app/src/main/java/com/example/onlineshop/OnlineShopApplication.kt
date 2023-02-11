@@ -2,6 +2,7 @@ package com.example.onlineshop
 
 
 import android.app.Application
+import com.example.onlineshop.di.ordersModule
 import com.example.onlineshop.di.retrofitModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext
@@ -15,6 +16,7 @@ class OnlineShopApplication : Application() {
             modules(
                 listOf(
                     retrofitModule,
+                    ordersModule
                 )
             )
         }
